@@ -25,7 +25,7 @@ runs:
   args:
     - ${{ inputs.sdk-version }}
     - ${{ inputs.project-dir }}
-    - ${{ input.extra-options }}
+    - ${{ inputs.extra-options }}
 branding:
   color: 'gray-dark'
   icon: 'archive'
