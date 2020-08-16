@@ -5,11 +5,15 @@ inputs:
   sdk-version:
     description: "The version of the Ren'Py SDK to use"
     required: true
-    default: '7.3.2'
+    default: '7.3.5'
   project-dir:
     description: "The path to the directory where the project exists"
     required: true
     default: '.'
+  extra-options:
+    description: "Extra command options for the Ren'Py SDK"
+    required: false
+    default: ''
 outputs:
   dir:
     description: "The directory where the distributed files exist"
@@ -21,6 +25,7 @@ runs:
   args:
     - ${{ inputs.sdk-version }}
     - ${{ inputs.project-dir }}
+    - ${{ input.extra-options }}
 branding:
   color: 'gray-dark'
   icon: 'archive'
